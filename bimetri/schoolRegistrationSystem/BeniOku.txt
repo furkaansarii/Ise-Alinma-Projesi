@@ -1,0 +1,29 @@
+Proje de istenilen bütün isterleri yaptım. 
+Birim testi asgari düzeyde denildiği için sadece ekleme metoduna yaptım bildiğimi göstermek adına.
+Controllerde Response Entinty, Generic Response, DTO yapısı, ve normal döndüm hepsini kullanabildiğimi göstermek adına.
+Repositoylerde hem sql sorgusu hem de isimlendirme sorgusu var ikisini de bildiğimi göstermek istedim.
+Onun dışında görülecek özellikler bulunmaktadır.
+Bir öğrencinin birden fazla kursa kayıt olması için ve bir kursta birden fazla öğrenci olması için 
+ManyToMany yaptım.
+Kurstaki kontenjanları studentManager içerisinde kontrol ettim.
+Crudları oluşturdum.
+Yeni bir rapor Apı ile yapılması gerekneleri anlamadım sanırım microservices mimarisinden bahsediliyor en kısa zamanda anlayacağımdan şüpheniz olmasın.
+Belirli bir kursa ait öğrencileri ve Belirli bir öğrenci için tüm kursları Student ve Course Controllerde @GetMapping(courseName) ile görebilirsiniz.
+Öğrencisi olmayan kursu ve kursu olmayan öğrenciyi de controllerde numberIsNull GetMappingi ile görebilirsiniz.
+
+veritabanı bilgilerim:
+
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.hibernate.show-sql=true
+spring.datasource.url=jdbc:postgresql://localhost:5432/School3
+spring.datasource.username=postgres
+spring.datasource.password=root
+spring.jpa.properties.javax.persistence.validation.mode = none
+
+Birim testini src/test/java nın altında studentTest Pakedinin içerisinde görebilirsiniz hem vaktim kısıtlı hem de asgari düzeyde
+dendiği için öğrenci eklemeye yaptım ve yapabildiğimi gösterip diğer isterlere devam ettim.
+
+
+
+
